@@ -1,0 +1,28 @@
+#端口
+server:
+  port: 8010
+
+allow:
+  paths: /login,/register,/getContractOwner,/getSystemInfo,/trace/detail
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+# 合约部署相关信息
+contract:
+  address: '0x14710e6644ca333377198d9a5fd96c736d359896'
+  owner: '0x9146735d5b74f4ba9c0c6f4a559bf43e9ef25927'
+  name: 'ProductTrace'
+  abi: '[{"constant":true,"inputs":[{"name":"_traceCode","type":"string"}],"name":"getSupplierInfo","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getTraceCodesCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_traceCode","type":"string"},{"name":"_storageTime","type":"uint256"},{"name":"_qualityCheck","type":"string"},{"name":"_shippingUnit","type":"string"},{"name":"_receivingUnit","type":"string"},{"name":"_receivingAddress","type":"string"}],"name":"addRetailerInfo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_traceCode","type":"string"},{"name":"_productName","type":"string"},{"name":"_producer","type":"string"},{"name":"_productionTime","type":"uint256"},{"name":"_productionAddress","type":"string"},{"name":"_productForm","type":"string"},{"name":"_batchQuantity","type":"uint256"}],"name":"addProductBaseInfo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_traceCode","type":"string"}],"name":"getProductBaseInfo","outputs":[{"name":"","type":"address"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"getUser","outputs":[{"name":"","type":"address"},{"name":"","type":"uint8"},{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"traceCodes","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"users","outputs":[{"name":"addr","type":"address"},{"name":"role","type":"uint8"},{"name":"isRegister","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getAllTraceCodes","outputs":[{"name":"","type":"string[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_traceCode","type":"string"},{"name":"_storageTime","type":"uint256"},{"name":"_qualityCheck","type":"string"},{"name":"_shippingUnit","type":"string"},{"name":"_receivingUnit","type":"string"},{"name":"_receivingAddress","type":"string"}],"name":"addSupplierInfo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_traceCode","type":"string"}],"name":"getRetailerInfo","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"unsetUser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_role","type":"uint8"},{"name":"_addr","type":"address"}],"name":"setUser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_producer","type":"address"},{"name":"_supplier","type":"address"},{"name":"_retailer","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}]'
+
+
+webase-front:
+  url: 'http://192.168.211.128:5002/WeBASE-Front'

@@ -1,0 +1,29 @@
+# node
+node_modules/
+dist/
+
+# java
+target/
+*.class
+
+# idea
+.idea/
+*.iml
+
+# vscode
+.vscode/
+
+# logs
+logs/
+*.log
+
+# system
+.DS_Store
+Thumbs.db
+
+# temp
+temp/
+tmp/
+
+# webase cache
+webase-data/
