@@ -1,29 +1,31 @@
-# node
+# IDEA
+.idea/
+
+# Node modules
 node_modules/
+
+# Vue build
 dist/
 
-# java
+# Java build
 target/
-*.class
 
-# idea
-.idea/
-*.iml
-
-# vscode
-.vscode/
-
-# logs
-logs/
+# Logs
 *.log
 
-# system
+# OS
 .DS_Store
 Thumbs.db
 
-# temp
-temp/
-tmp/
+# Environment
+.env
 
-# webase cache
-webase-data/
+# Package cache
+package-lock.json
+
+# WeBASE cache
+webase-deploy/
+nodes/
+
+# Temporary files
+*.tmp
